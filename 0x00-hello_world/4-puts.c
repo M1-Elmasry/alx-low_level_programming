@@ -2,7 +2,7 @@
 #include <string.h>
 
 /**
- * Hello from first c program
+ * main - prints something
  * Return: 0 if the code exist else 1
  */
 int main(void)
