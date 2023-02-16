@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - print somthing 
+ * main - print somthing
  * Return: 0 if code exist else 1
  */
 int main(void)
