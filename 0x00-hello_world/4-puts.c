@@ -3,6 +3,7 @@
 
 /**
  * Hello from first c program
+ * Return: 0 if the code exist else 1
  */
 int main(void)
 {
