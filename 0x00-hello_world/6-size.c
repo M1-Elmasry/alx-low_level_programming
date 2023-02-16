@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/*
+/**
  * main - prints size of some data types
  * Return: 0 if code exist else 1
  * nothing
