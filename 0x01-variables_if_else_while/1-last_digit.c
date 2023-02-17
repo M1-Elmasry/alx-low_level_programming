@@ -5,7 +5,7 @@
 
 /**
  * main - do many things
- * Return - 0 if code exist else 1
+ * Return: 0 if code exist else 1
  */
 int main(void)
 {
