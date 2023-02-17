@@ -17,7 +17,7 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	sprintf(numbers, "%d", n);
+	sprintf(number, "%d", n);
 	lnum = number[strlen(number) - 1];
 
 	l = lnum - '0';
