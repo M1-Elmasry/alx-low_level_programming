@@ -11,38 +11,38 @@ int main(void)
 {
 	int n;
 	char lnum;
-	int l_num;
-	char numbers[20];
+	int l;
+	char number[20];
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
 	sprintf(numbers, "%d", n);
-	lnum = numbers[strlen(numbers)-1];
+	lnum = number[strlen(number) - 1];
 
-	l_num = lnum - '0';
-	if (numbers[0] == '-')
-	{	
-		if (l_num == 0)
+	l = lnum - '0';
+	if (number[0] == '-')
+	{
+		if (l == 0)
 		{
-			printf("Last digit of %s is %d and is zero\n", numbers, l_num);
+			printf("Last digit of %s is %d and is zero\n", number, l);
 		}
 		else
 		{
-			printf("Last digit of %s is -%d and is less than 6 and not 0\n", numbers, l_num);
+			printf("Last digit of %s is -%d and is less than 6 and not 0\n", number, l);
 		}
 	}
-	else if (l_num == 0)
+	else if (l == 0)
 	{
-		printf("Last digit of %s is %d and is 0\n", numbers, l_num);
+		printf("Last digit of %s is %d and is 0\n", number, l);
 	}
-	else if (l_num < 6)
+	else if (l < 6)
 	{
-		printf("Last digit of %s is %d and is less than 6 and not 0\n", numbers, l_num);
+		printf("Last digit of %s is %d and is less than 6 and not 0\n", number, l);
 	}
-	else if (l_num > 5)
+	else if (l > 5)
 	{
-		printf("Last digit of %s is %d and is greater than 5\n", numbers, l_num);
+		printf("Last digit of %s is %d and is greater than 5\n", number, l);
 	}
 	return (0);
 }
