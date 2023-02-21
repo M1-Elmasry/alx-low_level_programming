@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/*
+/**
  * main - prints _putchar
  * Return: 0 if code exist else 1
  */
