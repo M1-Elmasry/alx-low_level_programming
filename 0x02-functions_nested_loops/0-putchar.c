@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /*
- * main - prints "_putchar"
+ * main - prints _putchar
  * Return: 0 if code exist else 1
  */
 int main(void)
 {
-	printf("_putchar");
+	printf("_putchar\n");
 	return (0);
 }
