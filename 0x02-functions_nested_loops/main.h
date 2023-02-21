@@ -1,3 +1,8 @@
+void _putchar(char* c)
+{
+	putchar(c);
+}
+
 void print_alphabet(void)
 {
 	int i;
