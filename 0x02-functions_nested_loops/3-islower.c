@@ -2,6 +2,7 @@
 
 /**
  * _islower - check c is lower or upper
+ * @c: the character will checked
  * Return: 0 if upper 1 if lower
  */
 int _islower(int c)
@@ -14,4 +15,4 @@ int _islower(int c)
 	{
 		return (0);
 	}
-}	
+}
