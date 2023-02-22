@@ -2,32 +2,27 @@
 #include "main.h"
 
 /**
- * print_to_98 - blabla
- * @a: blabla
+ * print_to_98 - print from @n to 98
+ * @n: the number to start printing from
+ * Return: void
  */
 void print_to_98(int n)
 {
-	int i, j;
+	int dir, i;
 
-	if (n <= 98)
+	dir = n < 98 ? 1 : -1;
+	i = n;
+	while (1)
 	{
-		for (i = n+1; i <= 98; i++)
+		printf("%d", i);
+		if (i != 98)
+			printf(", ");
+		else
 		{
-			printf("%d", n);
-			printf(", %d", i);
-
+			printf("\n");
+			break;
 		}
-		printf("\n");
-	}
-	else
-	{
-		for (j = n-1; j >= 98; j--)
-                {
-                        printf("%d", n);
-                        printf(", %d", j);
 
-                }
-                printf("\n");
+		i += dir;
 	}
-
 }
