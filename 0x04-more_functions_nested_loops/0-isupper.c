@@ -2,10 +2,10 @@
 
 /**
  * _isupper - check if character @c is in uppercase
- * @c: the character to check
- * Return: 1 if @c is uppercase else 0
+ * @a: the character to check
+ * Return: 1 if @a is uppercase else 0
  */
-int _isupper(int c)
+int _isupper(int a)
 {
-	return (c >= 'A' && c <= 'Z');
+	return (a >= 'A' && a <= 'Z');
 }
