@@ -3,7 +3,7 @@
 /**
  * main - prints number from 1 to 100 and replace to number which
  * maltiples of three by "Fizz" and numbers maltiples of five by "Buzz"
- * and maltiples of three and five by "FizzBuzz" 
+ * and maltiples of three and five by "FizzBuzz"
  * Return: 0 if code exist else 1
  */
 int main(void)
@@ -14,21 +14,21 @@ int main(void)
 	{
 		if (i % 3 == 0 && i % 5 == 0)
 		{
-			printf("FizzBuzz ");
+			printf("FizzBuzz");
 		}
 		else if (i % 3 == 0)
 		{
-			printf("Fizz ");
+			printf("Fizz");
 		}
-		else if ( i % 5 == 0)
+		else if (i % 5 == 0)
 		{
-			printf("Buzz ");
+			printf("Buzz");
 		}
 		else
 		{
-			printf("%d ", i);
+			printf("%d", i);
 		}
+		printf("%c", i <= 99 ? ' ' : '\n');
 	}
-	printf("\n");
 	return (0);
 }
