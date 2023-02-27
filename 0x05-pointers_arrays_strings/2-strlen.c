@@ -10,7 +10,7 @@ int _strlen(char *s)
     int i, ch, len;
 
     i = 0;
-    while(true)
+    while(1)
     {
         ch = *(s+i);
         if (ch <= 0)
@@ -20,5 +20,5 @@ int _strlen(char *s)
         i++;
         len++;
     }
-    return (len - 1);
+    return (len);
 }
