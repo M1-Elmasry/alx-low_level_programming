@@ -14,7 +14,7 @@ int main(void)
 	{
 		if ((i % 3 == 0) || (i % 5 == 0))
 		{
-			num += i
+			num += i;
 		}
 	}
 	return (0);
