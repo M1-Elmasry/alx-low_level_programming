@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * main - prints sum of all numbers that maltiples of 3 and 5
@@ -17,5 +17,6 @@ int main(void)
 			num += i;
 		}
 	}
+	printf("%d\n", num);
 	return (0);
 }
