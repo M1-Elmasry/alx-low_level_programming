@@ -6,14 +6,14 @@
  */
 int main(void)
 {
-	int i, first, second;
-        unsigned long int third;
+	int i;
+	unsigned long int first, second, third;
 
 	first = 1;
 	second = 2;
 	third = 3;
 
-	printf("%d, %d", first, second);
+	printf("%ld, %ld", first, second);
 
 	for (i = 0; i < 48; i++)
 	{
@@ -22,5 +22,6 @@ int main(void)
 		second = third;
 		third = first + second;
 	}
+	printf("\n");
 	return (0);
 }
