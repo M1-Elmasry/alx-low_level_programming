@@ -39,5 +39,5 @@ char *_strchr(char *s, char c)
 			break;
 		}
 	}
-	(*p != NULL) ? return (p) : return (NULL);
+	return (p != NULL ? p : NULL);
 }
