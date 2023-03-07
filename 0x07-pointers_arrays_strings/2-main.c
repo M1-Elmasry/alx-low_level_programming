@@ -11,7 +11,7 @@ int main(void)
     char *s = "esmailmostafa";
     char *f;
 
-    f = _strchr(s, 'l');
+    f = _strchr(s, 'j');
 
     if (f != NULL)
     {
