@@ -29,15 +29,13 @@ int len(char *s)
 char *_strchr(char *s, char c)
 {
 	int i;
-	char *p = NULL;
 
 	for (i = 0; i < len(s); i++)
 	{
 		if (*(s + i) == c)
 		{
-			p = &(*(s + i));
 			break;
 		}
 	}
-	return (p != NULL ? p : NULL);
+	return (*(s + i)  == c ? s + i : NULL);
 }
