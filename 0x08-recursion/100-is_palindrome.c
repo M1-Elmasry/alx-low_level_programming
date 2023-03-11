@@ -17,19 +17,6 @@ int compare(char *beg, char *end)
 }
 
 /**
- * _strlen - find length of string to access last index
- * @s: string
- * Return: length
- */
-
-int _strlen(char *s)
-{
-	if (*s == '\0')
-		return (0);
-	return (1 + _strlen(s + 1));
-}
-
-/**
  * is_palindrome - check if palindrome
  * @s: string to check
  * Return: 1 if palindrome, 0 if not
@@ -37,7 +24,7 @@ int _strlen(char *s)
 
 int is_palindrome(char *s)
 {
-	int len = _strlen(s);
+	int len = _strlen_recursion(s);
 
 	return (compare(s, (s + len - 1)));
 }
