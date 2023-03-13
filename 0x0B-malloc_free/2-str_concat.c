@@ -10,10 +10,14 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	if (s1 || s2)
-	{
-		int i, l;
-		char *s3 = malloc(strlen(s1) + strlen(s2));
+		int i;
+		int l;
+		char *s3;
+
+		(s1 == NULL) ? s1 = "" : s1;
+		(s2 == NULL) ? s2 = "" : s2;
+
+		s3 = malloc(strlen(s1) + strlen(s2));
 
 		if (s3)
 		{
@@ -31,6 +35,4 @@ char *str_concat(char *s1, char *s2)
 			return (s3);
 		}
 		return (NULL);
-	}
-	return (NULL);
 }

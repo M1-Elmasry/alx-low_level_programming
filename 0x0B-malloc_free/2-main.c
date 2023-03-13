@@ -10,14 +10,23 @@
 int main(void)
 {
     char *s;
+    char *ss;
+    char *sss;
 
     s = str_concat("Betty ", "Holberton");
-    if (s == NULL)
+    ss = str_concat(NULL, "Hello");
+    sss = str_concat(NULL, NULL);
+
+
+    if (s == NULL || ss == NULL || sss == NULL)
     {
         printf("failed\n");
         return (1);
     }
     printf("%s\n", s);
+    printf("%s\n", ss);
+    printf("%s\n", sss);
+
     free(s);
     return (0);
 }
