@@ -10,7 +10,7 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	if (s1 && s2)
+	if (s1 || s2)
 	{
 		int i, l;
 		char *s3 = malloc(strlen(s1) + strlen(s2));
