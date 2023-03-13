@@ -19,8 +19,11 @@ char *create_array(unsigned int size, char c)
 		for (i = 0; i < size; i++)
 		{
 			*(p + i) = c;
+		}		
+		if (p)
+		{
+			return (p);
 		}
-		return (p);
 	}
 	return (NULL);
 }
