@@ -12,7 +12,7 @@
 char *argstostr(int ac, char **av)
 {
 	int i, j;
-	char *out = malloc(ac * 8);
+	char *out2, *out = malloc(ac * 8);
 
 	if (ac > 0 && av != NULL)
 	{
@@ -24,8 +24,8 @@ char *argstostr(int ac, char **av)
 			}
 			*(out + (int) strlen(out)) = '\n';
 		}
-		out = realloc(out, strlen(out));
-		return (out);
+		out2 = realloc(out, strlen(out));
+		return (out2);
 	}
 	return (NULL);
 }
