@@ -4,7 +4,7 @@
 #include <string.h>
 
 /**
- * argstosrt - concatenates all the arguments of your program into string
+ * argstostr - concatenates all the arguments of your program into string
  * @ac: number of args
  * @av: airgs
  * Return: string
@@ -12,9 +12,9 @@
 char *argstostr(int ac, char **av)
 {
 	int i, j;
-	char *out = malloc(ac * 8 - 12);
-	
-	if ( ac > 0 && av != NULL)
+	char *out = malloc(ac * 8);
+
+	if (ac > 0 && av != NULL)
 	{
 		for (i = 0; i < ac; i++)
 		{
@@ -24,6 +24,7 @@ char *argstostr(int ac, char **av)
 			}
 			*(out + (int) strlen(out)) = '\n';
 		}
+		out = realloc(out, strlen(out) + 1);
 		return (out);
 	}
 	return (NULL);
