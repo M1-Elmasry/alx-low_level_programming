@@ -24,7 +24,8 @@ char *argstostr(int ac, char **av)
 			}
 			*(out + (int) strlen(out)) = '\n';
 		}
-		out2 = realloc(out, strlen(out));
+		out2 = malloc(strlen(out));
+		strcpy(out2, out);
 		return (out2);
 	}
 	return (NULL);
