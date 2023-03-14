@@ -24,7 +24,7 @@ char *argstostr(int ac, char **av)
 			}
 			*(out + (int) strlen(out)) = '\n';
 		}
-		out = realloc(out, strlen(out) + 1);
+		out = realloc(out, strlen(out));
 		return (out);
 	}
 	return (NULL);
