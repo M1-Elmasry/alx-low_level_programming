@@ -12,7 +12,7 @@
 char *argstostr(int ac, char **av)
 {
 	int i, j;
-	char *out = calloc(1, ac * 4 + 24);
+	char *out = calloc(1, ac * 4 + 25);
 
 	if (ac > 0 && av != NULL)
 	{
