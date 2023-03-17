@@ -19,6 +19,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s1 = "";
 	}
+
 	if (s2 == NULL)
 	{
 		s2 = "";
@@ -31,8 +32,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (p)
 	{
 		strcpy(p, s1);
-		strncpy(p, s2, len2 - 1);
+
+		strncpy(p, s2, len2);
+
 		*(p + strlen(p)) = '\0';
+
 		return (p);
 
 	}
