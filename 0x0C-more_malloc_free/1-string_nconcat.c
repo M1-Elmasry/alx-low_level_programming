@@ -31,11 +31,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (p)
 	{
 		strcpy(p, s1);
-
-		for (i = 0; i < len2; i++)
-		{
-			*(p + strlen(p)) = *(s2 + i);
-		}
+		strncpy(p, s2, len2 - 1);
 		*(p + strlen(p)) = '\0';
 		return (p);
 
