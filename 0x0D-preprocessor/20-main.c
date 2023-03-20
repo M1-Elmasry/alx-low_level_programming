@@ -12,6 +12,7 @@ char _putchar(char c)
 	return (write(1, &c, 1));
 }
 
+
 /**
  * main - print current file name
  * Return: 0 if success else 1
