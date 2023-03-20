@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include <stdio.h>
 
 /**
  * _putchar - reimpelmetation to putchar function in standard library
@@ -7,7 +8,7 @@
  */
 char _putchar(char c)
 {
-	return (write(1, &c, 1));	
+	return (write(1, &c, 1));
 }
 
 /**
@@ -22,7 +23,7 @@ int main(void)
 	file_name = __FILE__;
 
 	i = 0;
-	for(i = 0; file_name[i] != '\0'; i++)
+	for (i = 0; file_name[i] != '\0'; i++)
 	{
 		_putchar(file_name[i]);
 	}
