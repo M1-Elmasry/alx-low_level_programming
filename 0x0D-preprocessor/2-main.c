@@ -1,5 +1,4 @@
 #include <unistd.h>
-#include <stdio.h>
 
 /**
  * _putchar - reimpelmetation to putchar function in standard library
