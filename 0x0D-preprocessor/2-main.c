@@ -1,5 +1,7 @@
 #include <unistd.h>
 
+char _putchar(char c);
+
 /**
  * _putchar - reimpelmetation to putchar function in standard library
  * @c: character
