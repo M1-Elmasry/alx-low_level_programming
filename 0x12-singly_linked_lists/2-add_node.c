@@ -24,8 +24,10 @@ list_t *add_node(list_t **head, const char *str)
 	node->str = strdup(str);
 
 	if (!node->str)
+	{
 		free(node);
 		return (NULL);
+	}
 
 	node->len = strlen(node->str);
 	node->next = *head;
