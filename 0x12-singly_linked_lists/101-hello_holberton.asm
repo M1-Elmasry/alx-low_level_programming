@@ -1,6 +1,6 @@
 global main
 main:
-mov rdi, msg
+mov rdi, message
 mov rsi, 0
 mov al, 0
 
@@ -8,4 +8,5 @@ extern printf
 call printf
 
 ret
-msg: db "Hello, Holberton", 10, 0
+message: 
+db "Hello, Holberton", 10, 0
