@@ -32,8 +32,12 @@ int power(int a, int b)
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i, sum = 0, len = strlen(b);
+	unsigned int i, sum = 0, len;
 
+	if (!b)
+		return (0);
+
+	len = strlen(b);
 	for (i = 0; i < len; i++)
 	{
 		if (b[i] == '1')
