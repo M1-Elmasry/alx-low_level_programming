@@ -5,7 +5,7 @@
  * @b: integer number
  * Return: how many bits in @b
  */
-int len(unsigned long int b)
+unsigned int len(unsigned long int b)
 {
 	unsigned int len;
 
