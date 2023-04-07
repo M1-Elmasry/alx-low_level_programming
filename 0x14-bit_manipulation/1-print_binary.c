@@ -25,19 +25,22 @@ int len(int b)
  */
 void print_binary(unsigned long int n)
 {
-	int i, n_len = len(n);
+	int i, n_len;
 
-	if (n_len == 0)
+	if (!n)
 		_putchar('0');
 
+	n_len = len(n);
 	for (i = 0; i < n_len; i++)
 	{
-		if (n & (1 << (n_len - 1 - i)))
+		if ((n & (1 << (n_len - 1 - i))) > 0)
 		{
 			_putchar('1');
 			continue;
 		}
-
-		_putchar('0');
+		else
+		{
+			_putchar('0');
+		}
 	}
 }
