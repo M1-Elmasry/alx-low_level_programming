@@ -27,9 +27,6 @@ void print_binary(unsigned long int n)
 {
 	int i, n_len = len(n);
 
-	if (!n)
-		return (0);
-
 	if (n_len == 0)
 		_putchar('0');
 
@@ -43,4 +40,5 @@ void print_binary(unsigned long int n)
 
 		_putchar('0');
 	}
+	_putchar('\n');
 }
