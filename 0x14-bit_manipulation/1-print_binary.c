@@ -5,9 +5,9 @@
  * @b: integer number
  * Return: how many bits in @b
  */
-int len(int b)
+int len(unsigned long int b)
 {
-	int len;
+	unsigned int len;
 
 	len = 0;
 	while (b > 0)
@@ -25,7 +25,7 @@ int len(int b)
  */
 void print_binary(unsigned long int n)
 {
-	int i, n_len;
+	unsigned int i, n_len;
 
 	if (!n)
 		_putchar('0');
