@@ -5,8 +5,9 @@
  *
  * Return: 0 or 1
  */
-int get_endianness(void) {
+int get_endianness(void)
+{
 	int j = 1;
 
-	return *(char *)&j;
+	return (*(char *) &j);
 }
