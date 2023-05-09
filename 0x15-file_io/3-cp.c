@@ -34,7 +34,7 @@ int main(int ac, char **av)
 		exit(CLOSE_ERROR);
 	}
 
-	file_to =open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	file_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (write(file_to, buffer, strlen(buffer)) == -1)
 	{
 		write(STDERR_FILENO, "Error: Can't write to file ", 28);
