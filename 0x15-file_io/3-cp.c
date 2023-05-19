@@ -4,14 +4,14 @@ char *_itoa(int n);
 
 int main(int ac, char **av)
 {
-	size_t buff_size = 1024 * 2;
+	size_t buff_size = 1024 * 3;
 	int file_from, file_to;
 	char *buffer = malloc(buff_size * sizeof(char));
 
 	if (!buffer)
 		return (0);
 
-	if (ac > 3)
+	if (ac > 3 || ac < 3)
 	{
 		write(STDERR_FILENO, "Usage: cp file_from file_to\n", 29);
 		exit(USAGE_ERROR);
