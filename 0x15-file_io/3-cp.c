@@ -13,14 +13,14 @@ int main(int ac, char **av)
 
 	if (ac > 3 || ac < 3)
 	{
-		write(STDERR_FILENO, "Usage: cp file_from file_to\n", 29);
+		write(STDERR_FILENO, "Usage: cp file_from file_to\n", 28);
 		exit(USAGE_ERROR);
 	}
 
 	file_from = open(av[1], O_RDONLY);
 	if (read(file_from, buffer, buff_size) == -1)
 	{
-		write(STDERR_FILENO, "Error: Can't read from file ", 29);
+		write(STDERR_FILENO, "Error: Can't read from file ", 28);
 		write(STDERR_FILENO, av[1], strlen(av[1]));
 		write(STDERR_FILENO, "\n", 1);
 		exit(READ_ERROR);
@@ -28,7 +28,7 @@ int main(int ac, char **av)
 	}
 	if (close(file_from) == -1)
 	{
-		write(STDERR_FILENO, "Error: Can't close fd ", 23);
+		write(STDERR_FILENO, "Error: Can't close fd ", 22);
 		write(STDERR_FILENO, _itoa(file_from), strlen(_itoa(file_from)));
 		write(STDERR_FILENO, "\n", 1);
 		exit(CLOSE_ERROR);
@@ -37,14 +37,14 @@ int main(int ac, char **av)
 	file_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (write(file_to, buffer, strlen(buffer)) == -1)
 	{
-		write(STDERR_FILENO, "Error: Can't write to file ", 28);
+		write(STDERR_FILENO, "Error: Can't write to ", 22);
 		write(STDERR_FILENO, av[2], strlen(av[2]));
 		write(STDERR_FILENO, "\n", 1);
 		exit(WRITE_ERROR);
 	}
 	if (close(file_to) == -1)
 	{
-		write(STDERR_FILENO, "Error: Can't close fd ", 23);
+		write(STDERR_FILENO, "Error: Can't close fd ", 22);
 		write(STDERR_FILENO, _itoa(file_to), strlen(_itoa(file_to)));
 		write(STDERR_FILENO, "\n", 1);
 		exit(CLOSE_ERROR);
