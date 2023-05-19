@@ -4,7 +4,7 @@ char *_itoa(int n);
 
 int main(int ac, char **av)
 {
-	size_t buff_size = 1024;
+	size_t buff_size = 1024 * 2;
 	int file_from, file_to;
 	char *buffer = malloc(buff_size * sizeof(char));
 
