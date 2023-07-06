@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * len - convert @b to binary number and return how many bits in it
@@ -33,7 +34,7 @@ void print_binary(unsigned long int n)
 	n_len = len(n);
 	for (i = 0; i < n_len; i++)
 	{
-		if ((n & (1 << (n_len - 1 - i))) > 0)
+		if (n & (1UL << (n_len - 1 - i)))
 		{
 			_putchar('1');
 		}
