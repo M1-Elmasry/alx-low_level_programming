@@ -1,1 +1,1 @@
-Hello from README file
+collection of tasks to low level programming
