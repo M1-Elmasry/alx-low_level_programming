@@ -1,1 +1,1 @@
-collection of tasks to low level programming
+collection of tasks to practice low level programming
