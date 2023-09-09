@@ -39,14 +39,17 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_item->next = NULL;
 
 	if (!new_item->key || !new_item->value)
+	{
+		free(new_item);
 		return (0);
+	}
 
-	index = key_index((const unsigned char *)key, 1024);
+	index = key_index((const unsigned char *)key, ht->size);
 
-	if (!ht->array[index])
-		ht->array[index] = new_item;
-	else
+	if (ht->array[index] == NULL)
 		add_node_begin(&ht->array[index], new_item);
+	else
+		ht->array[index] = new_item;
 
 	return (1);
 }
