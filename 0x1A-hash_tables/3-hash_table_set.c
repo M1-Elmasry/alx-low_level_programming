@@ -49,7 +49,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	index = key_index((const unsigned char *)key, ht->size);
 
 	if (ht->array[index] == NULL)
-  		ht->array[index] = new_item;
+		ht->array[index] = new_item;
 	else
 		add_node_begin(&ht->array[index], new_item);
 
