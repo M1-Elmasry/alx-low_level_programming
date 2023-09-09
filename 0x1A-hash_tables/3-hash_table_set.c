@@ -1,5 +1,4 @@
 #include "hash_tables.h"
-
 /**
  * add_node_begin - add allocated node at the beginning of the list
  * @head: of the list
@@ -26,7 +25,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	int index;
 	hash_node_t *new_item = NULL;
 
-	if (!key || !value)
+	if (!key || !value || !strlen(key) || !strlen(value))
 		return (0);
 
 	new_item = malloc(sizeof(hash_node_t));
@@ -35,14 +34,17 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 
 	new_item->key = strdup(key);
-	new_item->value = strdup(value);
-	new_item->next = NULL;
+	if (!new_item->key)
+		return (0);
 
-	if (!new_item->key || !new_item->value)
+	new_item->value = strdup(value);
+	if (!new_item->value)
 	{
-		free(new_item);
+		free(new_item->key);
 		return (0);
 	}
+
+	new_item->next = NULL;
 
 	index = key_index((const unsigned char *)key, ht->size);
 
