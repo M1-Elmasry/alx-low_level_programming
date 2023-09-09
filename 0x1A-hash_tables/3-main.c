@@ -15,13 +15,9 @@ int main(void)
 
 	ht = hash_table_create(1024);
 	hash_table_set(ht, "hetairas", "blabla");
+	printf("index of hetairas is %d\n", key_index("hetairas", ht->size));
 	hash_table_set(ht, "mentioner", "blabla2");
-	printf("setted\n");
-	index = key_index((const unsigned char *)"hetairas", ht->size);
-	printf("index of hetairas = %d\n", index);
-	printf("%s\n", ht->array[index]->value);
-	i = hash_table_set(ht, "", "cool");
-	if (i == 0)
-		return (-1);
+	printf("index of mentioner is %d\n", key_index("mentioner", ht->size));
+	printf("%s\n", ht->array[278]->next->key);
 	return (EXIT_SUCCESS);
 }
