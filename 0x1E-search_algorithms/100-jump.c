@@ -1,7 +1,6 @@
-#include <stdio.h>
-#include <math.h>
 #include "search_algos.h"
-
+#include <math.h>
+#include <stdio.h>
 
 /**
  * linear_search_range - Searches for a value in a specified range of an array
@@ -31,8 +30,6 @@ int linear_search_range(int *array, int start, int end, int value)
 	return (-1);
 }
 
-
-
 /**
  * jump_search - Searches for a value in a sorted array using jump search.
  *
@@ -53,13 +50,13 @@ int jump_search(int *array, size_t size, int value)
 
 	for (i = 0; i < size; i += steps)
 	{
-		printf("Value checked array[%lu] = [%d]\n", i, array[i]);
 		if (array[i] >= value)
 		{
 			printf("Value found between indexes [%lu] and [%lu]\n", i - steps, i);
 			return (linear_search_range(array, i - steps, i, value));
 		}
-		else if (i + steps > size)
+		printf("Value checked array[%lu] = [%d]\n", i, array[i]);
+		if (i + steps > size)
 		{
 			printf("Value found between indexes [%lu] and [%lu]\n", i, i + steps);
 			return (linear_search_range(array, i, (i + (size - i - 1)), value));
