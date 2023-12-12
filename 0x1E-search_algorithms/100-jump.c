@@ -59,7 +59,7 @@ int jump_search(int *array, size_t size, int value)
 		printf("%s[%lu] = [%d]\n", m2, i, array[i]);
 		if (i + steps > size)
 		{
-			printf("%s[%lu] and [%lu]\n", m2, i, i + steps);
+			printf("%s[%lu] and [%lu]\n", m1, i, i + steps);
 			return (search(array, i, (i + (size - i - 1)), value));
 		}
 	}
